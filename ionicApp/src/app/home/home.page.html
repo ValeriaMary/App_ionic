@@ -20,7 +20,7 @@
   <ion-grid>
     <ion-row>
       <ion-col size="4" id="cor">Conteúdo 1</ion-col>
-      <ion-col size="4" id="cor2">Conteúdo 3</ion-col>
+      <ion-col size="4" id="cor2">Conteúdo 2</ion-col>
       <ion-col size="4">Conteúdo 3</ion-col>
     </ion-row>
   </ion-grid>
@@ -32,10 +32,46 @@
       <ion-col size="3" offset="3">Conteúdo 2</ion-col>
     </ion-row>
   </ion-grid>
+
+  <h4>Grid - alinhamento de textos (ion-text-start, ion-text-end, ion-text-center</h4>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4" class="ion-text-start">1</ion-col>
+      <ion-col size="4" class="ion-text-center">2</ion-col>
+      <ion-col size="4" class="ion-text-end">3</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <h4>Grid - alinhamento vertical</h4>
+  <ion-grid>
+    <ion-row class="ion-align-items-start">
+      <ion-col size="4">1 <br/> + <br/> +</ion-col>
+      <ion-col size="4">2</ion-col>
+      <ion-col size="4">3</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="4">1</ion-col>
+      <ion-col size="4">2 <br/> + <br/> +</ion-col>
+      <ion-col size="4">3</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row class="ion-align-items-end">
+      <ion-col size="4">1</ion-col>
+      <ion-col size="4">2</ion-col>
+      <ion-col size="4">3 <br/> + <br/> +</ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  
   
   <!-- <ion-button>Padrão</ion-button> -->
 </ion-content>
 
 <ion-footer>
-  <h4>Rodapé</h4>
+  <h4 position="fixed">Rodapé</h4>
 </ion-footer>
