@@ -7,6 +7,20 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  // constructor() {}
+  public titulo: String = "Meu primeiro App"
+  public imagemRandomica: String = "https://source.unsplash.com/random/200x200"
+
+  public imagemLocal: String = "../assets/foto3.jpg"
+
+  public atualiza(): void {
+
+    this.titulo = "Texto alterado"
+  }
+
+  public acao(): void {
+    
+    this.titulo = "Botão Clicado"
+  }
 
 }

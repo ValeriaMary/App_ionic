@@ -8,6 +8,26 @@
 
 <ion-content [fullscreen]="true">
 
+  Data Binding (ligação de dados) <br>
+  <h1>{{ titulo }}</h1>
+  <h4>Event Bindind</h4>
+
+  <ion-button (click)="acao()">Botão</ion-button>
+  <ion-item>
+    <ion-label position="stacked">Seu nome:</ion-label>
+    <ion-input (input)="atualiza()"></ion-input>
+  </ion-item>
+
+
+  <h4>Property Biding</h4>
+  <ion-img [src]="imagemLocal"></ion-img>
+
+
+  <h4>String interpolation</h4>
+  {{ titulo}}
+
+  <ion-img src="{{imagemRandomica}}"></ion-img>
+
   <h4>Grid</h4>
   <ion-grid>
     <ion-row>
@@ -73,5 +93,4 @@
 </ion-content>
 
 <ion-footer position="fixed">
-  <h4>Rodapé</h4>
 </ion-footer>
