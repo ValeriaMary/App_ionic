@@ -7,20 +7,46 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  // constructor() {}
-  public titulo: String = "Meu primeiro App"
-  public imagemRandomica: String = "https://source.unsplash.com/random/200x200"
+  public resultado: String = "Resultado"
 
-  public imagemLocal: String = "../assets/foto3.jpg"
+  calcular(){
+    //Validar se os campos foram preenchidos
+    if(this.precoAlcool && this.precoGasolina){
 
-  public atualiza(): void {
+      var pAlcool = parseFloat(this.precoAlcool)
+      var pGasolina = parseFloat(this.precoGasolina)
 
-    this.titulo = "Texto alterado"
+      // Faz cálculo resultado (PrecoAlcool / precoGasolina)
+      // se: resultado >=0.7 melhor utilizar gasolina 
+      // Senão: melhor utilizar álcool
+
+      var res = pAlcool / pGasolina
+      if(res >= 7){
+       this.resultado = "Melhor utilizar gasolina"
+      }else{
+        this.resultado = "Melhor utilizar o álcool"
+      }
+
+
+    }else{
+        this.resultado = "Preencha corretamento os campos!  "
+    }
   }
-
-  public acao(): void {
-    
-    this.titulo = "Botão Clicado"
-  }
-
 }
+  // constructor() {}
+  // public titulo: String = "Meu primeiro App"
+  // public imagemRandomica: String = "https://source.unsplash.com/random/200x200"
+
+  // public imagemLocal: String = "../assets/foto3.jpg"
+
+  // public atualiza(): void {
+
+  //   this.titulo = "Texto alterado"
+  // }
+
+  // public acao(): void {
+    
+  //   this.titulo = "Botão Clicado"
+  // }
+
+
