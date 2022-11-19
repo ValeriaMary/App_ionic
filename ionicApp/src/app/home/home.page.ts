@@ -11,7 +11,8 @@ export class HomePage {
 
   calcular(){
     //Validar se os campos foram preenchidos
-    if(this.precoAlcool && this.precoGasolina){
+    
+    if( this.precoAlcool && this.precoGasolina ){
 
       var pAlcool = parseFloat(this.precoAlcool)
       var pGasolina = parseFloat(this.precoGasolina)
@@ -21,12 +22,11 @@ export class HomePage {
       // Senão: melhor utilizar álcool
 
       var res = pAlcool / pGasolina
-      if(res >= 7){
+      if( res >= 7 ){
        this.resultado = "Melhor utilizar gasolina"
       }else{
         this.resultado = "Melhor utilizar o álcool"
       }
-
 
     }else{
         this.resultado = "Preencha corretamento os campos!  "
